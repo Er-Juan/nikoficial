@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JuanRomero">
+    <meta name="description" content="ProyectoFinal">
+    <meta name="keyword" content="html, js, css">
+    <link rel="icon" type="image/ico" sizes="16x16" href="../img/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/user.js"></script>
+    <title>Frutas y bombones villacruz</title>
+</head>
+<body id="cuerpo">
+    <header>
+        <figure>
+            <a href="../index.html"><img src="../img/logonik.png" alt="NIK Oficial" loading="lazy" class="logo"></a>
+        </figure>
+    </header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="../index.html"><img src="../img/house-solid.svg" class="spin" alt="Inicio"></a></li>
+            <li><a href="../doc/Nosotros.html">Nosotros</a></li>
+            <li><a href="../doc/AtencionAlCliente.html">Atención al cliente</a></li>
+            <li><a onclick="dispo()"><img class="spin" src="../img/cart-shopping-solid.svg" alt="Mi carro"></a></li>
+            <li><a href="../doc/MiUsuario.html"><img class="spin" src="../img/user-solid.svg" alt="Mi usuario"></a></li>
+            <li class="izquierda" onclick="modonoche()"><img class="spin" src="../img/moon-regular.svg" alt="Modo noche"></li>
+            <li class="izquierda" onclick="mododia()"><img class="spin" src="../img/sun-regular.svg" alt="Modo dia"></li>
+        </ul>
+    </nav>
+    <script>
+        function modonoche(){
+            document.getElementById(`cuerpo`).style.background=`black`;
+            document.getElementById(`cuerpo`).style.color=`white`;
+        }
+        function mododia() {
+            document.getElementById(`cuerpo`).style.background=`white`;
+            document.getElementById(`cuerpo`).style.color=`black`;
+        }
+        function dispo(){
+        alert("Todavía no esta disponible esta opción en nuestra pagina web");
+        }
+    </script>
+    <main>
+        <div style="width: 50%; float: left;">
+            <figure class="product">
+                <img src="../img/camiazul.png" alt="Nueces con chocolate" loading="lazy">
+            </figure>
+            <figure class="product">
+                <img src="..\img\camiazulvuelta.png" alt="Nueces con chocolate" loading="lazy">
+            </figure>
+        </div>
+        <aside>
+            <div style="text-align: center;" class="textos">
+                Higos Secos con Chocolate<br>
+                €3,39 <br>
+                Impuesto incluido. Los gastos de envío se calculan<br>
+                en la pantalla de pagos.
+                <hr>
+                <br>
+                <p><a onclick="dispo()">Agregar al carrito</a></p><br>
+                <p style="text-align: justify;">
+                    Bolsa de 250 gramos de  higos secos recubiertos de una fina capa de delicioso chocolate con leche.   Para nosotros es importante que predomine el sabor del higo seco sobre el chocolate creando la combinación perfecta entre los dos sabores.  Los  higos  se presentan sin pedúnculos,  siendo extraídos  de forma manual en nuestras instalaciones, y de tamaño pequeño para que sea más fácil su consumo y   se  convierta en una experiencia muy agradable al saborearlo.<br><br>
+                    Los higos secos chocolateados son el  snack perfecto para las meriendas de los  niños, los eventos deportivos para los atletas y para cualquier persona que sea amante del higo seco y del chocolate.<br><br>
+                    <strong>Ingredientes:</strong> Higos secos (70%); cobertura (30%): azúcar, manteca de cacao, leche desnatada en polvo, pasta de cacao, lactosuero en polvo (leche), materia grasa láctea anhidra, leche entera en polvo, emulgente: lecitina de soja, aroma natural de vainilla. Puede contener trazas de frutos secos.<br>
+                </p>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div style="float: left;"><span style="font-size: 20px;float: right;margin-left: 1em;">Redes sociales</span><br><a href="https://www.instagram.com/bombondehigovillacruz/?hl=es" class="ancla"><img src="../img/instagram.svg" alt="instagram" loading="lazy" class="imagenes"></a><a href="https://www.instagram.com/bombondehigovillacruz/?hl=es" class="ancla"><img src="../img/facebook.svg" alt="facebook" loading="lazy" class="imagenes"></a></div>
+        <div style="float: right; margin-top: 5px;margin-right: 1em;">&copy; 2023 Villacruuz</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Erpiras">
+    <meta name="description" content="Una página dedicada a la información en el sector informatico y tecnológico">
+    <meta name="keyword" content="html, js, css">
+    <link rel="icon" type="image/ico" sizes="16x16" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="../js/user.js"></script>
+    <title>Infotech</title>
+    <style>
+    h2{
+        font-size: 28px;
+        font-family: sans-serif;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: aqua;
+    }
+    h3{
+        font-size: 28px;
+        font-family: sans-serif;
+        text-decoration: underline;
+        text-decoration-color: aqua;
+        text-align: center;
+    }
+    h4{
+
+        font-size: 28px;
+        font-family: sans-serif;
+        text-decoration: underline;
+        text-decoration-color: aqua;
+        text-align: center;
+    }
+    </style>
+</head>
+<body id="cuerpo">
+    <header>
+        <figure>
+            <a href="../index.html"><img src="../img/logonik.png" alt="NIK Oficial" loading="lazy" class="logo"></a>
+        </figure>
+    </header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="../index.html"><img src="../img/house-solid.svg" class="spin" alt="Inicio"></a></li>
+            <li><a href="../doc/Nosotros.html">Nosotros</a></li>
+            <li><a href="../doc/AtencionAlCliente.html">Atención al cliente</a></li>
+            <li><a onclick="dispo()"><img class="spin" src="../img/cart-shopping-solid.svg" alt="Mi carro"></a></li>
+            <li><a href="../doc/MiUsuario.html"><img class="spin" src="../img/user-solid.svg" alt="Mi usuario"></a></li>
+            <li class="izquierda" onclick="modonoche()"><img class="spin" src="../img/moon-regular.svg" alt="Modo noche"></li>
+            <li class="izquierda" onclick="mododia()"><img class="spin" src="../img/sun-regular.svg" alt="Modo dia"></li>
+        </ul>
+    </nav>
+    <script>
+        function modonoche(){
+            document.getElementById(`cuerpo`).style.background=`black`;
+            document.getElementById(`cuerpo`).style.color=`white`;
+        }
+        function mododia() {
+            document.getElementById(`cuerpo`).style.background=`white`;
+            document.getElementById(`cuerpo`).style.color=`black`;
+        }
+        function dispo(){
+        alert("Todavía no esta disponible esta opción en nuestra pagina web");
+        }
+    </script>
+    <main>
+    <h2>Villacruz</h2>
+    <div class="textos" style="text-align: justify;margin-left: 25%;margin-right: 25%;">
+        Vicaex 2000 SL, (Villacruz marca comercial) es una empresa extremeña con más de 35 años de experiencia como productores y distribuidores  de fruta de hueso e higos secos. Situados en un pequeño pueblo de Badajoz, Villar de Rena, ampliamos nuestra oferta entrando en el mundo del chocolate y los frutos secos. Nuestra filosofía es seguir creando productos que satisfagan al cliente y ofrecer lo mejor de nuestra tierra.
+    </div><br>
+    <h3>Ubicación<img src="../img/location-dot-solid.svg" alt="Ubicación" loading="lazy" class="imagenes"></h3>
+    <div style="margin-left: 27%;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d749.3653234593114!2d-5.809590823594478!3d39.07783621468561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd14575ec8d771d5%3A0xc8d4a009b638dbe6!2sCentral%20de%20Frutas%20Villacruz%2F%20Bombones%20de%20Higo%20Villacruz!5e1!3m2!1ses!2ses!4v1676372695451!5m2!1ses!2ses" width="62%" min-width="220px" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <h4>Contacto<img src="../img/phone-solid.svg" alt="Telefono" loading="lazy" class="imagenes"></h4>
+    <div class="textos" style="text-align: justify; margin-left: 25%; font-weight:bold;">Telefono: +34 641525822<br>Gmail: villacruz@gmail.com</div>
+    <br><br>
+    </main>
+    <footer>
+        <div style="float: left;"><span style="font-size: 20px;float: right;margin-left: 1em;">Redes sociales</span><br><a href="https://www.instagram.com/bombondehigovillacruz/?hl=es" class="ancla"><img src="../img/instagram.svg" alt="instagram" loading="lazy" class="imagenes"></a><a href="https://www.instagram.com/bombondehigovillacruz/?hl=es" class="ancla"><img src="../img/facebook.svg" alt="facebook" loading="lazy" class="imagenes"></a></div>
+        <div style="float: right; margin-top: 5px;margin-right: 1em;">&copy; 2023 Tecnotech</div>
+    </footer>
+</body>
+</html>

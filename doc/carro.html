@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="JuanRomero">
+    <meta name="description" content="ProyectoFinal">
+    <meta name="keyword" content="html, js, css">
+    <link rel="icon" type="image/ico" sizes="16x16" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Frutas y bombones villacruz</title>
+</head>
+<body id="cuerpo">
+    <header>
+        <figure>
+            <a href="../index.html"><img src="../img/logonik.png" alt="NIK Oficial" loading="lazy" class="logo"></a>
+        </figure>
+    </header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="../index.html"><img src="../img/house-solid.svg" class="spin" alt="Inicio"></a></li>
+            <li><a href="../doc/Nosotros.html">Nosotros</a></li>
+            <li><a href="../doc/AtencionAlCliente.html">Atención al cliente</a></li>
+            <li><a onclick="dispo()"><img class="spin" src="../img/cart-shopping-solid.svg" alt="Mi carro"></a></li>
+            <li><a href="../doc/MiUsuario.html"><img class="spin" src="../img/user-solid.svg" alt="Mi usuario"></a></li>
+            <li class="izquierda" onclick="modonoche()"><img class="spin" src="../img/moon-regular.svg" alt="Modo noche"></li>
+            <li class="izquierda" onclick="mododia()"><img class="spin" src="../img/sun-regular.svg" alt="Modo dia"></li>
+        </ul>
+    </nav>
+    <script>
+        function modonoche(){
+            document.getElementById(`cuerpo`).style.background=`black`;
+            document.getElementById(`cuerpo`).style.color=`white`;
+        }
+        function mododia() {
+            document.getElementById(`cuerpo`).style.background=`white`;
+            document.getElementById(`cuerpo`).style.color=`black`;
+        }
+        function dispo(){
+        alert("Todavía no esta disponible esta opción en nuestra pagina web");
+        }
+    </script>
+    <div id="productos">
+        <h1>Carrito NIK</h1>
+        <br><br>
+    </div>
+    
+        <script>
+            // Obtener los parámetros de la URL
+            function obtenerParametrosURL() {
+            var parametros = {};
+            var url = window.location.href;
+            var index = url.indexOf('?');
+                if (index !== -1) {
+                    var queryString = url.substring(index + 1);
+                    var pares = queryString.split('&');
+                    for (var i = 0; i < pares.length; i++) {
+                        var par = pares[i].split('=');
+                        if (par.length === 2) {
+                            parametros[par[0]] = decodeURIComponent(par[1]);
+                        }
+                    }
+                }
+            return parametros;
+            }
+    
+        // Obtener el producto y mostrarlo en el carrito
+        function mostrarProductoEnCarrito() {
+          var parametros = obtenerParametrosURL();
+          var producto = parametros.producto;
+    
+          // Crear un nuevo elemento para mostrar el producto
+          var elementoProducto = document.createElement('div');
+          elementoProducto.textContent = producto;
+    
+          // Agregar el elemento al contenedor de productos
+          var contenedorProductos = document.getElementById('productos');
+          contenedorProductos.appendChild(elementoProducto);
+        }
+    
+        // Mostrar el producto en el carrito al cargar la página
+        window.onload = function() {
+          mostrarProductoEnCarrito();
+        };
+      </script>
+    <footer class="footercorto">
+        <div>
+          <p style="text-align:right">&copy; 2023 Villacruuz</p>
+          <div style="text-align: left;"><span style="font-size: 20px;float: right;">Redes sociales</span><a href="https://www.instagram.com/bombondehigovillacruz/?hl=es" class="ancla"><img src="../img/instagram.svg" alt="instagram" loading="lazy" class="imagenes"></a><a href="https://www.instagram.com/bombondehigovillacruz/?hl=es" class="ancla"><img src="../img/facebook.svg" alt="facebook" loading="lazy" class="imagenes"></a></div>
+        </div>
+    </footer>
+</body>
+</html>
